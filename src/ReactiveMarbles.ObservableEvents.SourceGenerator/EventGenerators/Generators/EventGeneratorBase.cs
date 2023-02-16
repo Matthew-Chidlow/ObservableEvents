@@ -54,6 +54,47 @@ namespace ReactiveMarbles.ObservableEvents.SourceGenerator.EventGenerators.Gener
                 .WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
         }
 
+        protected static MethodDeclarationSyntax? GenerateExtensionEventWrapperObservable(IEventSymbol eventDetails, string? prefix, INamedTypeSymbol typeDefinition)
+        {
+            prefix ??= string.Empty;
+            var genericConstraints = typeDefinition.GetTypeParameterConstraints();
+            var genericParameters = typeDefinition.GetTypeParametersAsTypeParameterSyntax();
+
+            // Create "Observable.FromEvent" for our method.
+            var (expressionBody, observableEventArgType) = GenerateFromEventExpression(eventDetails, "self");
+
+            if (observableEventArgType == null || expressionBody == null)
+            {
+                return null;
+            }
+
+            var modifiers = new[] { SyntaxKind.PublicKeyword, SyntaxKind.StaticKeyword };
+
+            var parameters = new[] { Parameter(typeDefinition.GetTypeSyntax(), "self", new[] { SyntaxKind.ThisKeyword }) };
+
+            var attributes = RoslynHelpers.GenerateObsoleteAttributeList(eventDetails);
+            var method = MethodDeclaration(modifiers, observableEventArgType, prefix + eventDetails.Name + "Rx", parameters, 2, expressionBody)
+                .WithLeadingTrivia(XmlSyntaxFactory.GenerateSummarySeeAlsoComment("Gets an observable which signals when the {0} event triggers.", eventDetails.ConvertToDocument()))
+                .WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
+
+            if (genericParameters.Count > 0)
+            {
+                method = method.WithTypeParameterList(TypeParameterList(genericParameters));
+                if (genericConstraints.Count > 0)
+                {
+                    method = method.WithConstraintClauses(new SyntaxList<TypeParameterConstraintClauseSyntax>(genericConstraints));
+                }
+            }
+
+            return method;
+
+            // Produces for static: public static global::System.IObservable<(argType1, argType2)> EventName => (contents of expression body)
+            // Produces for instance: public global::System.IObservable<(argType1, argType2)> EventName => (contents of expression body)
+            // return PropertyDeclaration(observableEventArgType, prefix + eventDetails.Name, attributes, modifiers, expressionBody, 2)
+            //     .WithLeadingTrivia(XmlSyntaxFactory.GenerateSummarySeeAlsoComment("Gets an observable which signals when the {0} event triggers.", eventDetails.ConvertToDocument()))
+            //     .WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
+        }
+
         private static (ArrowExpressionClauseSyntax ArrowClause, TypeSyntax EventArgsType) GenerateFromEventExpression(IEventSymbol eventSymbol, string dataObjectName)
         {
             IReadOnlyCollection<ArgumentSyntax> methodParametersArgumentList;

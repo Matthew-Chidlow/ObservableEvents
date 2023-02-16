@@ -61,7 +61,7 @@ namespace ReactiveMarbles.ObservableEvents.SourceGenerator.EventGenerators.Gener
 
         private static IEnumerable<ClassDeclarationSyntax> GenerateEventWrapperClasses(INamedTypeSymbol typeDefinition, IReadOnlyList<IEventSymbol> events)
         {
-            var members = new List<MemberDeclarationSyntax> { GenerateEventWrapperField(typeDefinition), GenerateEventWrapperClassConstructor(typeDefinition) };
+            var members = new List<MemberDeclarationSyntax> { /*GenerateEventWrapperField(typeDefinition), GenerateEventWrapperClassConstructor(typeDefinition)*/ };
 
             if (events.Count == 0)
             {
@@ -74,27 +74,25 @@ namespace ReactiveMarbles.ObservableEvents.SourceGenerator.EventGenerators.Gener
             {
                 var eventSymbol = events[i];
 
-                var eventWrapper = GenerateEventWrapperObservable(eventSymbol, DataFieldName, null);
+                var eventWrapper = GenerateExtensionEventWrapperObservable(eventSymbol, null, typeDefinition);
 
                 if (eventWrapper == null)
                 {
                     continue;
                 }
 
-                properties.Add(eventWrapper);
+                members.Add(eventWrapper);
             }
 
             var obsoleteList = RoslynHelpers.GenerateObsoleteAttributeList(typeDefinition);
 
-            if (properties.Count > 0)
+            if (properties.Count > 0 || members.Count > 0)
             {
                 yield return ClassDeclaration(
                     "Rx" + typeDefinition.Name + "Events",
                     obsoleteList,
-                    new[] { SyntaxKind.InternalKeyword },
+                    new[] { SyntaxKind.InternalKeyword, SyntaxKind.StaticKeyword },
                     members.Concat(properties).ToList(),
-                    typeDefinition.GetTypeParameterConstraints(),
-                    typeDefinition.GetTypeParametersAsTypeParameterSyntax(),
                     1);
             }
         }

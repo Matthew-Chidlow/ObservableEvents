@@ -16,7 +16,7 @@ namespace ReactiveMarbles.ObservableEvents.SourceGenerator
 {
     internal class SyntaxReceiver : ISyntaxReceiver
     {
-        public List<InvocationExpressionSyntax> Events { get; } = new List<InvocationExpressionSyntax>();
+        public List<ExpressionSyntax> Events { get; } = new();
 
         public void OnVisitSyntaxNode(SyntaxNode syntaxNode)
         {
@@ -28,19 +28,20 @@ namespace ReactiveMarbles.ObservableEvents.SourceGenerator
             switch (invocationExpression.Expression)
             {
                 case MemberAccessExpressionSyntax memberAccess:
-                    HandleSimpleName(memberAccess.Name, invocationExpression);
+                    HandleSimpleName(memberAccess.Name, memberAccess.Expression);
                     break;
                 case MemberBindingExpressionSyntax bindingAccess:
-                    HandleSimpleName(bindingAccess.Name, invocationExpression);
+                    // HandleSimpleName(bindingAccess.Name, invocationExpression); // TODO:
                     break;
             }
         }
 
-        private void HandleSimpleName(SimpleNameSyntax simpleName, InvocationExpressionSyntax invocationExpression)
+        private void HandleSimpleName(SimpleNameSyntax simpleName, ExpressionSyntax invocationExpression)
         {
             var methodName = simpleName.Identifier.Text;
 
-            if (string.Equals(methodName, nameof(Events)))
+            // if (string.Equals(methodName, nameof(Events)))
+            if (methodName.EndsWith("Rx"))
             {
                 Events.Add(invocationExpression);
             }

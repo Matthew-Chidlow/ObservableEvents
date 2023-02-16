@@ -89,15 +89,14 @@ namespace ReactiveMarbles.ObservableEvents
             var options = (compilation as CSharpCompilation)?.SyntaxTrees[0].Options as CSharpParseOptions;
             compilation = context.Compilation.AddSyntaxTrees(CSharpSyntaxTree.ParseText(SourceText.From(ExtensionMethodText, Encoding.UTF8), options));
 
-            var extensionMethodInvocations = new List<MethodDeclarationSyntax>();
             var staticMethodInvocations = new List<MethodDeclarationSyntax>();
 
             GetAvailableTypes(compilation, receiver, out var instanceNamespaceList, out var staticNamespaceList);
 
             GenerateEvents(context, _staticEventGenerator, true, staticNamespaceList, staticMethodInvocations);
-            GenerateEvents(context, _eventGenerator, false, instanceNamespaceList, extensionMethodInvocations);
+            GenerateEvents(context, _eventGenerator, false, instanceNamespaceList);
 
-            GenerateEventExtensionMethods(context, extensionMethodInvocations);
+            // GenerateEventExtensionMethods(context, extensionMethodInvocations);
         }
 
         /// <inheritdoc />
@@ -143,22 +142,7 @@ namespace ReactiveMarbles.ObservableEvents
             {
                 var semanticModel = compilation.GetSemanticModel(invocation.SyntaxTree);
 
-                if (semanticModel.GetSymbolInfo(invocation).Symbol is not IMethodSymbol methodSymbol)
-                {
-                    continue;
-                }
-
-                if (!SymbolEqualityComparer.Default.Equals(methodSymbol.ContainingType, observableGeneratorExtensions))
-                {
-                    continue;
-                }
-
-                if (methodSymbol.TypeArguments.Length != 1)
-                {
-                    continue;
-                }
-
-                if (methodSymbol.TypeArguments[0] is not INamedTypeSymbol callingSymbol)
+                if (semanticModel.GetTypeInfo(invocation).Type is not INamedTypeSymbol callingSymbol)
                 {
                     continue;
                 }

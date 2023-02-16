@@ -26,7 +26,7 @@ namespace ReactiveMarbles.ObservableEvents
         /// </summary>
         public void Test()
         {
-            this.Events().PropertyChanged.Subscribe();
+            this.PropertyChangedRx().Subscribe();
 
             ////RxStaticTestEvents.TestChanged.Subscribe(); 
         }
@@ -36,7 +36,6 @@ namespace ReactiveMarbles.ObservableEvents
     {
         public MyNoEventsClass()
         {
-            this.Events();
         }
     }
 
@@ -45,10 +44,12 @@ namespace ReactiveMarbles.ObservableEvents
         public event Func<int, Task> TestEvent1;
         public event Func<int, ValueTask> TestEvent2;
 
+        public int test => 1;
+
         public AsyncEventsClass()
         {
-            var e1 = this.Events().TestEvent1;
-            var e2 = this.Events().TestEvent2;
+            var e1 = this.TestEvent1Rx();
+            var e2 = this.TestEvent2Rx();
         }
     }
 
@@ -63,7 +64,7 @@ namespace ReactiveMarbles.ObservableEvents
 
         public GenericTestClass()
         {
-            var events = this.Events().TestChanged;
+            var events = this.TestChangedRx();
         }
     }
 
@@ -73,7 +74,7 @@ namespace ReactiveMarbles.ObservableEvents
 
         public SecondGenericTextClass()
         {
-            var events = this.Events().TestChanged;
+            var events = this.TestChangedRx();
         }
     }
 
@@ -82,10 +83,8 @@ namespace ReactiveMarbles.ObservableEvents
         public GenericClassesTestClass()
         {
             var colInt = new ObservableCollection<int>();
-            colInt.Events();
 
             var col = new ObservableCollection<AsyncEventsClass>();
-            col.Events();
         }
     }
 
@@ -98,7 +97,17 @@ namespace ReactiveMarbles.ObservableEvents
 
         public GenericConstraintsTestClass()
         {
-            var events = this.Events().TestChanged;
+            var events = this.TestChangedRx();
+        }
+    }
+
+    public class BasicTest
+    {
+        public event Action Test;
+
+        public void test()
+        {
+            this.TestRx();
         }
     }
 }

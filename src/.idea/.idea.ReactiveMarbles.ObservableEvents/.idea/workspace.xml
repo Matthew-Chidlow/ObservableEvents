@@ -23,23 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a86edc6-46dd-41ab-a686-33482a72d624" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/Comparers/AssemblyReferenceNameComparer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/Comparers/NuGetFrameworkInRangeComparer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/Comparers/PackageIdentityNameComparer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReactiveMarbles.ObservableEvents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReactiveMarbles.ObservableEvents/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/AssemblyHelpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/AssemblyHelpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/FileSystemHelpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/FileSystemHelpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/NuGetFrameworkFolderHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/NuGetFrameworkFolderHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/NuGetFrameworkHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/NuGetFrameworkHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/ReferenceLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.NuGet.Helpers/ReferenceLocator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Example/ReactiveMarbles.ObservableEvents.Example.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Example/ReactiveMarbles.ObservableEvents.Example.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Example/MyForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Example/MyForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/Generators/EventGeneratorBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/Generators/EventGeneratorBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/Generators/InstanceEventGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/Generators/InstanceEventGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/RoslynGeneratorExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/RoslynGeneratorExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/RoslynHelpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/RoslynHelpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/GeneratorLibraryTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/GeneratorLibraryTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/ReactiveMarbles.ObservableEvents.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/ReactiveMarbles.ObservableEvents.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/SourceGeneratorUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/SourceGeneratorUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/MethodGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/EventGenerators/MethodGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/SyntaxReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.SourceGenerator/SyntaxReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../version.json" beforeDir="false" afterPath="$PROJECT_DIR$/../version.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +41,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2872F2FE-5879-407D-AA53-B68B95F58AC8/9f/3f7c9bc6/FrameworkConstants.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D8B434AB-AE59-40D8-AF44-335329D39B14/49/78532889/LibraryRange.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TesterConsoleApp/bin/Release/net6.0/TesterConsoleApp.deps.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/717fd832e456411f86951318732921637680/36/541b85ea/ObservableCollection`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/64adf97e852a91875dc75dd3a6ee61eeb22b4250423358ef8febd0cceab0346b/CSharpExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/78a4724dfa1239dfa466152ac8cc8b975bf4a9f873aa6cf4faf9b934ba8e/GeneratorContexts.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7f643e48a1daa6df0735d35ff5374476e112c4b/Syntax.xml.Syntax.Generated.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e858df0c35a6add25e74ed945753f7f9560dada84c1fb81ecc4b2d99eaa4cd/Page.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cb9dc8c461b19d12a16b6e68b72c230bc181a42c39b3b94262390c1e79e40cc/TypeInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e64a2620e23276aa879e6cedfc5a26f7e3612d239b89b2e235f6552ebac9e31/IMethodSymbol.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -68,27 +65,32 @@
       <option value="$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/GeneratorLibraryTests.cs" />
     </changedPaths>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1hwmoHfxCKIGK27Gvxcs4xCKeBi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34997028" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RunManager" selected=".NET Project.TesterConsoleApp">
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Matthew Chidlow\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Matthew Chidlow\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Matthew Chidlow\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
     <configuration name="TesterConsoleApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -118,6 +120,8 @@
       <updated>1600930701816</updated>
       <workItem from="1600930706757" duration="1296000" />
       <workItem from="1622006389722" duration="7398000" />
+      <workItem from="1676510456099" duration="12999000" />
+      <workItem from="1676523923004" duration="275000" />
     </task>
     <servers />
   </component>
@@ -136,7 +140,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -147,27 +150,13 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/GeneratorLibraryTests.cs</url>
           <line>180</line>
-          <properties documentPath="C:\source\reactivemarbles\ObservableEventsSourceGenerator\src\ReactiveMarbles.ObservableEvents.Tests\GeneratorLibraryTests.cs" initialLine="168" containingFunctionPresentation="method 'DeriveEventsTest'">
-            <startOffsets>
-              <option value="7091" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7166" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\source\reactivemarbles\ObservableEventsSourceGenerator\src\ReactiveMarbles.ObservableEvents.Tests\GeneratorLibraryTests.cs" initialLine="168" containingFunctionPresentation="method 'DeriveEventsTest'" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ReactiveMarbles.ObservableEvents.Tests/GeneratorLibraryTests.cs</url>
           <line>140</line>
-          <properties documentPath="C:\source\reactivemarbles\ObservableEventsSourceGenerator\src\ReactiveMarbles.ObservableEvents.Tests\GeneratorLibraryTests.cs" initialLine="128" containingFunctionPresentation="method 'DeriveEventsTest'">
-            <startOffsets>
-              <option value="6048" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6115" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\source\reactivemarbles\ObservableEventsSourceGenerator\src\ReactiveMarbles.ObservableEvents.Tests\GeneratorLibraryTests.cs" initialLine="128" containingFunctionPresentation="method 'DeriveEventsTest'" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
